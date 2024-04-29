@@ -1,0 +1,136 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    transition: background-color 0.2s linear;
+    background-color: black;      
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    margin-left: 5rem;
+}
+
+.nav_actions {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .nav_actions {
+        gap: 2.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+.search_action {
+    margin-left: 70rem;
+}
+
+.user_action {
+    margin-right: 4rem;
+}
+
+
+
+.search_action,
+.cart_action,
+.user_action {
+    position: relative;
+    color: white;
+    
+}
+
+.search_action:hover .tooltip,
+.cart_action:hover .tooltip {
+    visibility: visible;
+}
+
+.search_action span,
+.user_action span {
+    cursor: pointer;
+}
+
+.cart_action .badge {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-color-2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user_action .dropdown_menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 17.5rem;
+    /* background-color: var(--bg-color-2); */
+    padding: 1.4rem;
+    font-size: 0.9rem;
+    /* border: 1px solid var(--text-muted); */
+    border-radius: 3px;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.user_action .dropdown_menu h4 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.user_action .dropdown_menu h4 a {
+    color: var(--main-color);
+    opacity: 0.95;
+}
+
+.user_action .dropdown_menu h4 a:hover {
+    opacity: 1;
+}
+
+.user_action .dropdown_menu p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.user_action .dropdown_menu button {
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--text-muted);
+    transition: all 0.3s ease;
+}
+
+.user_action .dropdown_menu button:hover {
+    color: #eee;
+    border-color: #eee;
+}
+
+.user_action .dropdown_menu li:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.user_action .dropdown_menu li a:hover {
+    color: #eee;
+}
+
+.user_action:hover .dropdown_menu {
+    visibility: visible;
+}
